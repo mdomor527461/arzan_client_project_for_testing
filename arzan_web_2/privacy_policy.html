@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arzan Topup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm border-b border-gray-200 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="text-white p-2 rounded-md">
+                        <a href="index.html">
+                            <div class="text-xs font-bold leading-tight cursor-pointer">
+                                <div class="w-16 h-16 rounded flex items-center justify-center text-white font-bold">
+                                    <img src="images/logo.png">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" data-page="home"
+                            class="nav-link text-gray-500 hover:text-gray-700 px-3 py-2 text-lg font-medium transition-colors duration-200">
+                            Home
+                        </a>
+                        <a href="privacy_policy.html" data-page="privacy"
+                            class="nav-link text-gray-500 hover:text-gray-700 px-3 py-2 text-lg font-medium transition-colors duration-200">
+                            Privacy policy
+                        </a>
+                        <a href="support.html" data-page="support"
+                            class="nav-link text-gray-500 hover:text-gray-700 px-3 py-2 text-lg font-medium transition-colors duration-200">
+                            Support & FAQs
+                        </a>
+                        <a href="terms.html" data-page="terms"
+                            class="nav-link text-gray-500 hover:text-gray-700 px-3 py-2 text-lg font-medium transition-colors duration-200">
+                            Terms & Conditiion
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button"
+                        class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger icon -->
+                        <svg id="hamburger-icon" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- X icon -->
+                        <svg id="close-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+                <a href="index.html" data-page="home"
+                    class="nav-link-mobile text-gray-500 hover:text-gray-700 block px-3 py-2 text-base font-medium transition-colors duration-200">
+                    Home
+                </a>
+                <a href="privacy_policy.html" data-page="privacy"
+                    class="nav-link-mobile text-gray-500 hover:text-gray-700 block px-3 py-2 text-base font-medium transition-colors duration-200">
+                    Privacy policy
+                </a>
+                <a href="support.html" data-page="support"
+                    class="nav-link-mobile text-gray-500 hover:text-gray-700 block px-3 py-2 text-base font-medium transition-colors duration-200">
+                    Support & FAQs
+                </a>
+                <a href="terms.html" data-page="terms"
+                    class="nav-link-mobile text-gray-500 hover:text-gray-700 block px-3 py-2 text-base font-medium transition-colors duration-200">
+                    Terms & Condition
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- banner section  -->
+    <section
+        class="bg-[url('images/privacy_banner.png')] bg-contain bg-center bg-no-repeat h-[500px] flex items-center relative"
+        style="background-size: 100% 100%;">
+
+    </section>
+
+    <!-- Header -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+
+            <div class="bg-blue-100 p-4 rounded-lg inline-block">
+                <p class="text-blue-800 font-medium">
+                    <i class="fas fa-calendar-alt mr-2"></i>
+                    Last updated: February 16, 2025
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-8 md:p-12">
+                <!-- Introduction -->
+                <div class="mb-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-info-circle text-blue-600 mr-3"></i>
+                        Introduction
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Welcome to Arzan . We value your privacy and are committed to protecting your personal
+                        information. This Privacy Policy explains how we collect, use, store, and protect your data when
+                        you use our mobile application and topup services.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        By using Arzan, you agree to the collection and use of your information in accordance with this
+                        policy. We specialize in providing mobile recharge services across multiple countries with a
+                        primary focus on Afghanistan operators. If you do not agree with this Privacy Policy, please do
+                        not use our Services.
+                    </p>
+                </div>
+
+                <!-- Information We Collect -->
+                <div class="mb-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-database text-blue-600 mr-3"></i>
+                        Information We Collect
+                    </h2>
+
+                    <div class="space-y-6">
+                        <div class="bg-blue-50 p-6 rounded-xl">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Personal Information</h3>
+                            <p class="text-gray-600 mb-3">We collect personal information that you provide when you
+                                register or interact with our Services:</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Name and contact information (email, phone number)</li>
+                                <li>Account credentials and authentication information</li>
+                                <li>Payment information and billing details</li>
+                                <li>Mobile numbers for topup services</li>
+                                <li>Geographic location data</li>
+                                <li>Profile picture (if provided via Google Sign-In)</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-green-50 p-6 rounded-xl">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Authentication Information</h3>
+                            <p class="text-gray-600 mb-3">We use Google Sign-In and Firebase Authentication to secure
+                                your account. When you sign in, we may collect:</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Your Google account name and email address</li>
+                                <li>Profile picture (if available and authorized)</li>
+                                <li>Authentication tokens for secure access</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-purple-50 p-6 rounded-xl">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Usage Information</h3>
+                            <p class="text-gray-600 mb-3">We automatically collect information about your use of our
+                                Services:</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Transaction history and topup records</li>
+                                <li>Device information (type, operating system, IP addresses)</li>
+                                <li>App activity logs and usage patterns</li>
+                                <li>Crash reports and performance data</li>
+                                <li>Cookies and similar tracking technologies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How We Use Your Information -->
+                <div class="mb-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-cogs text-blue-600 mr-3"></i>
+                        How We Use Your Information
+                    </h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-purple-50 p-6 rounded-xl">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">
+                                <i class="fas fa-mobile-alt text-purple-600 mr-2"></i>
+                                Service Delivery
+                            </h3>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Process mobile topup transactions</li>
+                                <li>• Communicate with mobile operators</li>
+                                <li>• Send transaction confirmations</li>
+                                <li>• Provide customer support</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-orange-50 p-6 rounded-xl">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">
+                                <i class="fas fa-user-shield text-orange-600 mr-2"></i>
+                                Account Management
+                            </h3>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Create, maintain, and secure accounts</li>
+                                <li>• Enable Google and Firebase authentication</li>
+                                <li>• Prevent fraud and unauthorized access</li>
+                                <li>• Comply with legal requirements</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-teal-50 p-6 rounded-xl">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">
+                                <i class="fas fa-chart-line text-teal-600 mr-2"></i>
+                                Service Improvement
+                            </h3>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Analyze usage patterns and optimize performance</li>
+                                <li>• Develop new features and improve existing ones</li>
+                                <li>• Monitor service performance and stability</li>
+                                <li>• Personalize user experience</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-pink-50 p-6 rounded-xl">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">
+                                <i class="fas fa-envelope text-pink-600 mr-2"></i>
+                                Communication
+                            </h3>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Send important updates and security notifications</li>
+                                <li>• Provide customer support responses</li>
+                                <li>• Share promotional offers and service updates</li>
+                                <li>• Respond to inquiries and feedback</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Storage and Security -->
+                <div class="mb-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-lock text-blue-600 mr-3"></i>
+                        Data Storage and Security
+                    </h2>
+                    <p class="text-gray-600 mb-6">All user data, including authentication details, is securely stored in
+                        Google Firebase. We implement comprehensive security measures to protect your information:</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-red-50 p-6 rounded-xl">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">
+                                <i class="fas fa-key text-red-600 mr-2"></i>
+                                Encryption
+                            </h3>
+                            <p class="text-gray-600">End-to-end encryption for data transmission and industry-standard
+                                protocols for data at rest.</p>
+                        </div>
+
+                        <div class="bg-blue-50 p-6 rounded-xl">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">
+                                <i class="fas fa-server text-blue-600 mr-2"></i>
+                                Secure Infrastructure
+                            </h3>
+                            <p class="text-gray-600">Firebase implements robust security protocols with regular security
+                                updates and monitoring.</p>
+                        </div>
+
+                        <div class="bg-green-50 p-6 rounded-xl">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">
+                                <i class="fas fa-user-shield text-green-600 mr-2"></i>
+                                Access Control
+                            </h3>
+                            <p class="text-gray-600">Strict access controls ensure only authorized personnel can access
+                                your data.</p>
+                        </div>
+
+                        <div class="bg-yellow-50 p-6 rounded-xl">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">
+                                <i class="fas fa-eye text-yellow-600 mr-2"></i>
+                                Regular Security Updates
+                            </h3>
+                            <p class="text-gray-600">Continuous security monitoring and updates to keep your data safe
+                                from threats.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Information Sharing -->
+                <div class="mb-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-share-alt text-blue-600 mr-3"></i>
+                        Information Sharing and Disclosure
+                    </h2>
+                    <p class="text-gray-600 mb-6">We do not sell, rent, or share your personal data with third parties,
+                        except in the following circumstances:</p>
+
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-blue-500 pl-6">
+                            <h3 class="font-bold text-gray-800 mb-2">Mobile Operators</h3>
+                            <p class="text-gray-600">We share necessary information with mobile network operators to
+                                process your topup requests, especially with Afghanistan operators and international
+                                partners.</p>
+                        </div>
+
+                        <div class="border-l-4 border-green-500 pl-6">
+                            <h3 class="font-bold text-gray-800 mb-2">Service Providers</h3>
+                            <p class="text-gray-600">We may share limited data with Google Firebase for authentication
+                                and data storage, and with trusted payment processors.</p>
+                        </div>
+
+                        <div class="border-l-4 border-orange-500 pl-6">
+                            <h3 class="font-bold text-gray-800 mb-2">Legal Requirements</h3>
+                            <p class="text-gray-600">We may disclose information when required by law, court orders, or
+                                to detect and prevent fraud, cyber threats, or unauthorized activities.</p>
+                        </div>
+
+                        <div class="border-l-4 border-purple-500 pl-6">
+                            <h3 class="font-bold text-gray-800 mb-2">Security Purposes</h3>
+                            <p class="text-gray-600">To protect our users' rights, safety, and the integrity of our
+                                services from fraudulent or harmful activities.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Your Rights and Data Deletion -->
+                <div class="mb-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-user-check text-blue-600 mr-3"></i>
+                        Your Rights and Data Deletion
+                    </h2>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Your Rights</h3>
+                        <p class="text-gray-600 mb-4">You have the following rights regarding your personal information:
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
+                                <i class="fas fa-eye text-blue-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Access</h4>
+                                    <p class="text-gray-600">Request a copy of the personal information we hold about
+                                        you.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
+                                <i class="fas fa-edit text-green-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Correction</h4>
+                                    <p class="text-gray-600">Access, update, or correct any inaccurate or incomplete
+                                        information.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
+                                <i class="fas fa-trash text-red-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Deletion</h4>
+                                    <p class="text-gray-600">Request deletion of your personal information and account
+                                        data.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
+                                <i class="fas fa-ban text-orange-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Withdraw Consent</h4>
+                                    <p class="text-gray-600">Withdraw consent for data collection and opt-out of
+                                        marketing communications.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                            <i class="fas fa-trash-alt text-red-600 mr-2"></i>
+                            How to Delete Your Data
+                        </h3>
+                        <p class="text-gray-600 mb-4">If you want to delete your Arzan account and associated data, you
+                            have two options:</p>
+
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-2">1. In-App Deletion</h4>
+                                <ul class="text-gray-600 space-y-1">
+                                    <li>• Open the Arzan App</li>
+                                    <li>• Navigate to Settings → Account → Delete My Account</li>
+                                    <li>• Confirm the deletion request</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-2">2. Manual Request</h4>
+                                <p class="text-gray-600 mb-2">If you cannot delete your account through the App:</p>
+                                <ul class="text-gray-600 space-y-1">
+                                    <li>• Send an email to <span class="font-semibold">admin@arzantopup.com</span></li>
+                                    <li>• Use subject: "Data Deletion Request"</li>
+                                    <li>• Include your registered email address or phone number</li>
+                                    <li>• We will process your request within 30 days</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Retention -->
+                <div class="mb-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-clock text-blue-600 mr-3"></i>
+                        Data Retention Policy
+                    </h2>
+                    <div class="space-y-4">
+                        <p class="text-gray-600">We retain user data only for as long as necessary to provide our
+                            services. If your account remains inactive for 24 months, we may delete your data
+                            automatically.</p>
+
+                        <div class="bg-amber-50 p-6 rounded-xl">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">Exception for Legal Compliance</h3>
+                            <p class="text-gray-600 mb-3">Certain data may be retained for legal, security, or
+                                compliance purposes, such as:</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Transaction records for financial compliance</li>
+                                <li>Fraud prevention records</li>
+                                <li>Legal dispute resolution documentation</li>
+                                <li>Regulatory reporting requirements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Children's Privacy -->
+                <div class="mb-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-child text-blue-600 mr-3"></i>
+                        Children's Privacy
+                    </h2>
+                    <div class="bg-blue-50 p-6 rounded-xl">
+                        <p class="text-gray-600">
+                            Arzan is not intended for children under the age of 13. We do not knowingly collect personal
+                            information from children under 13. If we discover that a child has provided personal
+                            information, we will delete it immediately and terminate the account.
+                        </p>
+                    </div>
+                </div>
+                <!-- Updates -->
+                <div class="bg-yellow-50 p-6 rounded-xl">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-sync-alt text-yellow-600 mr-3"></i>
+                        Changes to This Privacy Policy
+                    </h2>
+                    <p class="text-gray-600">
+                        We may update this Privacy Policy from time to time. Any changes will be posted within the App
+                        and on this page, and we will update the "Last updated" date. If significant changes are made,
+                        we will notify users via email or in-app notifications. We encourage you to review this Privacy
+                        Policy periodically for any changes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section  -->
+    <footer class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Logo and Tagline -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center">
+                            <img src="images/logo.png" alt="">
+                        </div>
+                        <div>
+                            <div class="text-xl font-bold text-gray-900">ARZAAN</div>
+                            <div class="text-sm text-gray-600">TOPUP</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-800 text-sm leading-relaxed">
+                        Power Up Your Mobile, Power Up Your Life
+                    </p>
+                </div>
+
+                <!-- Company Links -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Company</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors text-sm">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors text-sm">
+                                Locations
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors text-sm">
+                                Partner With Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors text-sm">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors text-sm">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="terms.html" class="text-gray-600 hover:text-blue-600 transition-colors text-sm">
+                                Terms & Condition
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy_policy.html"
+                                class="text-gray-600 hover:text-blue-600 transition-colors text-sm">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="support.html" class="text-gray-600 hover:text-blue-600 transition-colors text-sm">
+                                Support & FAQs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="data_deletion.html"
+                                class="text-gray-600 hover:text-blue-600 transition-colors text-sm">
+                                Data Deletion
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- App Download & Social -->
+                <div>
+                    <div class="space-y-3 mb-6">
+                        <!-- Google Play Button -->
+                        <a href="#" class="block">
+                            <div
+                                class="bg-black text-white px-4 py-2 rounded-lg flex items-center space-x-3 hover:bg-gray-800 transition-colors w-fit">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                                </svg>
+                                <div class="text-left">
+                                    <div class="text-xs">Get it on</div>
+                                    <div class="text-sm font-semibold">Google Play</div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- App Store Button -->
+                        <a href="#" class="block">
+                            <div
+                                class="bg-black text-white px-4 py-2 rounded-lg flex items-center space-x-3 hover:bg-gray-800 transition-colors w-fit">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                                </svg>
+                                <div class="text-left">
+                                    <div class="text-xs">Download on the</div>
+                                    <div class="text-sm font-semibold">App Store</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Social Media Icon -->
+                    <div class="flex gap-2">
+                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-lg"><i class="fab fa-facebook-f"></i>
+                            </span>
+                        </div>
+                        <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-lg"><i class="fab fa-google"></i>
+                            </span>
+                        </div>
+                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-lg"><i class="fab fa-linkedin"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-12 pt-8 border-t border-gray-200 text-center">
+                <p class="text-gray-500 text-sm">
+                    © 2025 Arzaan Group. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>
